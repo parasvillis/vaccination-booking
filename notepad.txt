@@ -1,0 +1,28 @@
+models --- 
+    user -- 
+
+    center --
+                store capacity map[int]int -- cap for day
+                appointmentbook
+services -- 
+    user_service
+        -- addUser [ above 18 ]
+    vacc center service
+        -- addCenter
+        -- addCapacity
+    booking service
+        -- bookvacc
+        -- LIST_ALL_BOOKINGS
+        -- LIST_VACCINATION_CENTERS
+        -- cancel booking
+        .
+
+
+● BOOK_VACCINATION <center_id> <day> <user_id>
+Example: BOOK_VACCINATION    VC123 5 U123
+
+-- day : id - true // for a day multiple booking can be there
+        -- map[int]map[string]bool
+        
+
+        { 5 : {"U123" : true} } 
